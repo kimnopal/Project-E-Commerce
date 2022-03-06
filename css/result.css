@@ -1,0 +1,21 @@
+/* ===== RESULT ===== */
+.result__text {
+    color: var(--font-color);
+    font-size: var(--font-mdm);
+    font-weight: var(--font-medium);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 1200px) {
+    /* ===== RESULT ===== */
+    .result__text {
+        font-size: var(--font-md);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== RESULT ===== */
+    .result__text {
+        font-size: var(--font-sm);
+    }
+}

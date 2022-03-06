@@ -1,0 +1,25 @@
+/* ===== SOCIAL MEDIA ===== */
+.social__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social__icon-container {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social__icon {
+    font-size: var(--font-lg);
+    color: var(--primary-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 576px) {
+    /* ===== SOCIAL MEDIA ===== */
+    .social__container {
+        width: 100%;
+    }
+}

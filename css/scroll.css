@@ -1,0 +1,39 @@
+/* ===== SCROLL ===== */
+.scroll {
+    display: none;
+    width: fit-content;
+    position: fixed;
+    z-index: 90;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    animation: color 2s alternate-reverse infinite;
+    box-shadow: var(--blue-shadow);
+}
+
+@keyframes color {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    /* ===== SCROLL ===== */
+    .scroll {
+        padding: 6px 13px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== SCROLL ===== */
+    .scroll {
+        padding: 4px 11px;
+    }
+}

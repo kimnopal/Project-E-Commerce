@@ -1,0 +1,111 @@
+/* ===== JUMBOTRON ===== */
+.jumbotron__container {
+    display: grid;
+    grid-template-areas:
+        "carousel carousel aside-top"
+        "carousel carousel aside-bottom";
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 200px 200px;
+    gap: 3px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.jumbotron__carousel {
+    grid-area: carousel;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.jumbotron__carousel-slide {
+    display: grid;
+    grid-template-columns: 100.1%;
+    grid-auto-columns: 100.1%;
+    grid-auto-flow: column;
+    grid-template-rows: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron__carousel-img-container {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron__carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jumbotron__carousel-prev-btn {
+    left: 10px;
+}
+
+.jumbotron__carousel-next-btn {
+    right: 10px;
+}
+
+.jumbotron__carousel-dots {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.jumbotron__carousel-dot {
+    display: block;
+    margin: 0 10px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.current-dot {
+    transform: scale(2);
+    background-color: white;
+}
+
+.jumbotron__aside-top {
+    grid-area: aside-top;
+    width: 100%;
+}
+
+.jumbotron__aside-bottom {
+    grid-area: aside-bottom;
+    width: 100%;
+}
+
+.jumbotron__aside-container {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron__aside-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 576px) {
+    /* ===== JUMBOTRON ===== */
+    .jumbotron__container {
+        grid-template-areas:
+            "carousel"
+            "aside-top"
+            "aside-bottom";
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 150px 150px;
+    }
+}

@@ -1,0 +1,321 @@
+@import url(stye.css);
+/* ===== NAVBAR ===== */
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__brand-name {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--font-lg);
+}
+
+.nav__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-content: center;
+    align-items: center;
+    grid-auto-flow: column;
+    text-align: center;
+}
+
+.nav__links-items {
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-md);
+    font-weight: var(--font-medium);
+    color: var(--font-color);
+}
+
+.nav__toggle {
+    width: 20px;
+    height: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.nav__toggle-hamburger {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--font-color);
+    transform-origin: 0 0;
+    transition: 0.3s;
+}
+
+.active .nav__toggle-hamburger:first-child {
+    transform: translate(1px, 0) rotate(45deg);
+    background-color: white;
+}
+
+.active .nav__toggle-hamburger:nth-child(2) {
+    transform: translateX(-5px);
+    opacity: 0;
+}
+
+.active .nav__toggle-hamburger:last-child {
+    transform: translate(0, 1px) rotate(-45deg);
+    background-color: white;
+}
+
+.nav__field {
+    display: grid;
+    grid-template-columns: minmax(100px, 2fr) minmax(45px, 0.5fr) minmax(45px, 0.5fr);
+    align-items: center;
+}
+
+.nav__search {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background-color: white;
+    border: 1px solid var(--primary-light);
+    box-shadow: var(--primary-shadow);
+    border-radius: 50px;
+}
+
+.nav__search-field {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px 10px 5px 20px;
+    font-size: var(--font-md);
+    font-weight: var(--font-medium);
+    color: var(--font-color);
+}
+
+.nav__search-field::placeholder {
+    color: var(--font-color);
+    opacity: 0.5;
+}
+
+.nav__submit-field {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 20px 5px 10px;
+    position: relative;
+    font-size: var(--font-md);
+    font-weight: var(--font-medium);
+    color: var(--font-color);
+    opacity: 0.5;
+}
+
+.nav__submit-field::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: var(--font-color);
+    opacity: 0.5;
+}
+
+.nav__profile-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    /* background-color: red; */
+}
+
+.nav__profile {
+    font-size: var(--font-lg);
+    color: var(--font-color);
+    justify-self: flex-end;
+    cursor: pointer;
+    /* background-color: blue; */
+}
+
+.nav__profile-menu {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 100%;
+    right: -50%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.nav__profile-menu-item {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--font-md);
+    margin: 5px;
+    display: block;
+}
+
+.nav__login,
+.nav__logout {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 3px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav__logout {
+    background-color: var(--primary-red-color);
+}
+
+.nav__shopping-cart {
+    font-size: var(--font-lg);
+    position: relative;
+    padding: 12px 12px 12px 0;
+    justify-self: flex-end;
+}
+
+.nav__shopping-cart-icon {
+    color: var(--font-color);
+}
+
+.nav__shopping-cart-notif {
+    text-decoration: none;
+    font-size: var(--font-md);
+    position: absolute;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0 8px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 960px) {
+    /* ===== NAVBAR ===== */
+    .nav {
+        grid-template-columns: 0.5fr 2fr 1.75fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== NAVBAR ===== */
+    .nav__brand-name {
+        font-size: var(--font-md);
+    }
+
+    .nav__links-items {
+        font-size: var(--font-sm);
+    }
+
+    .nav__field {
+        grid-template-columns: minmax(100px, 2fr) minmax(30px, 0.25fr) minmax(30px, 0.5fr);
+    }
+
+    .nav__search-field {
+        padding: 5px 5px 5px 10px;
+        font-size: var(--font-sm);
+    }
+
+    .nav__submit-field {
+        padding: 5px 10px 5px 5px;
+        font-size: var(--font-sm);
+    }
+
+    .nav__profile {
+        font-size: var(--font-md);
+    }
+
+    .nav__profile-menu-item {
+        font-size: var(--font-sm);
+    }
+
+    .nav__shopping-cart {
+        font-size: var(--font-md);
+        padding: 8px 8px 8px 0;
+    }
+
+    .nav__shopping-cart-notif {
+        font-size: var(--font-sm);
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== NAVBAR ===== */
+    .nav {
+        position: relative;
+        grid-template-columns: 0.5fr 2fr 1.5fr;
+    }
+
+    .nav__brand {
+        text-align: right;
+    }
+
+    .nav__links {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: var(--primary-color);
+        z-index: 99;
+        transition: ease-in-out 0.3s;
+    }
+
+    .nav__links.active {
+        top: 0;
+    }
+
+    .nav__links-items {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__field {
+        grid-template-columns: minmax(40px, 0.3fr) minmax(40px, 0.3fr);
+        justify-content: flex-end;
+    }
+
+    .nav__search {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        left: 0;
+        grid-template-columns: 85% 15%;
+        z-index: 2;
+    }
+
+    .nav__search-field {
+        padding: 8px 8px 8px 10px;
+        font-size: var(--font-sm);
+    }
+
+    .nav__submit-field::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 50%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: var(--font-color);
+    }
+}

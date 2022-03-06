@@ -1,0 +1,115 @@
+/* ===== ABOUT ===== */
+.about__container {
+    display: grid;
+    grid-template-columns: 70% auto;
+    gap: 50px;
+}
+
+.about__image-container {
+    display: grid;
+    grid-template-areas:
+        "left right-top"
+        "left right-bottom";
+    grid-template-columns: 50% auto;
+    grid-template-rows: 200px 200px;
+    gap: 5px;
+    box-shadow: var(--image-shadow);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.about__image-left {
+    grid-area: left;
+    width: 100%;
+    height: 100%;
+    /* border-top-left-radius: 30px; */
+    /* border-bottom-left-radius: 30px; */
+}
+
+.about__image-right-top {
+    grid-area: right-top;
+    width: 100%;
+    height: 100%;
+    /* border-top-right-radius: 30px; */
+}
+
+.about__image-right-bottom {
+    grid-area: right-bottom;
+    width: 100%;
+    height: 100%;
+    /* border-bottom-right-radius: 30px; */
+}
+
+.about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__text-container {
+    align-self: center;
+}
+
+.about__title {
+    font-size: var(--font-xl);
+    font-weight: var(--font-medium);
+    color: var(--font-color);
+    margin-bottom: 20px;
+}
+
+.about__desc {
+    font-size: var(--font-md);
+    color: var(--font-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 960px) {
+    /* ===== ABOUT ===== */
+    .about__container {
+        display: grid;
+        grid-template-columns: 60% auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== ABOUT ===== */
+    .about__container {
+        display: grid;
+        grid-template-columns: 55% auto;
+        gap: 20px;
+    }
+
+    .about__image-container {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 180px 180px;
+    }
+
+    .about__title {
+        font-size: var(--font-lg);
+        margin-bottom: 15px;
+    }
+
+    .about__desc {
+        font-size: var(--font-sm);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== ABOUT ===== */
+    .about__container {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+
+    .about__title {
+        font-size: var(--font-mdm);
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .about__desc {
+        font-size: var(--font-sm);
+        text-align: center;
+    }
+}

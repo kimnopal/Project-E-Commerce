@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+    --font-size-h2-lg: 1.8rem;
+    --icon-size-lg: 1.2rem;
+    --dark-blue: #4d84e2;
+    --light-blue: #5995fd;
+
+    --font-size-h2-md: 1.5rem;
+    --icon-size-md: 0.9rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    padding-left: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: auto 1fr;
+        padding: 0;
+    }
+
+    .container.active {
+        grid-template-columns: auto 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    /* ===== DASHBOARD ===== */
+    .dashboard-heading {
+        flex-direction: column;
+    }
+
+    .heading-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ===== SEARCH ===== */
+    .search-field {
+        padding: 5px 10px;
+        margin-bottom: 15px;
+    }
+
+    /* ===== ADD CATEGORY ===== */
+    .add-category {
+        place-self: start center;
+        margin: 0;
+    }
+}

@@ -1,0 +1,107 @@
+/* ===== PAGINATION ===== */
+.pagination__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination__info-page {
+    font-size: var(--font-md);
+    color: var(--font-color);
+}
+
+.pagination__9-card {
+    display: none;
+}
+
+.pagination__nav-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 10px;
+    /* justify-content: space-between; */
+}
+
+.pagination__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 10px; */
+    text-decoration: none;
+    font-size: var(--font-md);
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary-color);
+}
+
+.pagination__active {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.pagination__nav-prev,
+.pagination__nav-next {
+    padding: 0 15px;
+    border-radius: 7px;
+}
+
+.pagination__nav-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 960px) {
+    /* ===== PAGINATION ===== */
+    .pagination__9-card {
+        display: initial;
+    }
+
+    .pagination__8-card {
+        display: none;
+    }
+
+    .pagination__nav-prev,
+    .pagination__nav-next {
+        padding: 3px 10px;
+        border-radius: 7px;
+    }
+
+    .pagination__nav-number {
+        width: 35px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== PAGINATION ===== */
+    .pagination__info-page {
+        font-size: var(--font-sm);
+    }
+
+    .pagination__btn {
+        font-size: var(--font-sm);
+    }
+
+    .pagination__nav-number {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== PAGINATION ===== */
+    .pagination__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .pagination__9-card {
+        display: none;
+    }
+
+    .pagination__9-card {
+        display: initial;
+    }
+}

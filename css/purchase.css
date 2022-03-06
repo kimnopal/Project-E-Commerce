@@ -1,0 +1,109 @@
+/* ===== PURCHASE ===== */
+.purchase__table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.purchase__header {
+    font-size: var(--font-md);
+    color: var(--font-color);
+    padding: 10px;
+    background-color: var(--primary-light);
+    border-bottom: 1px solid var(--font-color);
+}
+
+.purchase__data {
+    font-size: var(--font-md);
+    color: var(--font-color);
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--font-color);
+}
+
+.purchase__button {
+    display: block;
+    font-size: var(--font-md);
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.purchase__back {
+    width: fit-content;
+    padding: 4px 15px;
+}
+
+.purchase__empty {
+    display: block;
+    font-size: var(--font-md);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 960px) {
+    /* ===== PURCHASE ===== */
+    .purchase__header,
+    .purchase__data,
+    .purchase__button {
+        font-size: var(--font-sm);
+    }
+
+    /* .purchase__button {
+        width: 80px;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== PURCHASE ===== */
+    .purchase__header,
+    .purchase__data {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== PURCHASE ===== */
+    .purchase__table {
+        margin-bottom: 0;
+    }
+
+    .purchase__header {
+        display: none;
+    }
+
+    .purchase__data-container {
+        display: block;
+        margin-bottom: 25px;
+        padding: 0 10px;
+        background-color: var(--primary-light);
+        border: 1px solid var(--primary-color);
+        box-shadow: var(--primary-shadow);
+        border-radius: 10px;
+    }
+
+    .purchase__data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+        flex-wrap: wrap;
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    .purchase__data:last-child {
+        border: none;
+    }
+
+    .purchase__data::before {
+        content: attr(data-label);
+    }
+
+    .purchase__empty {
+        font-size: var(--font-sm);
+    }
+}

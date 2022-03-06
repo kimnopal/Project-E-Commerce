@@ -1,0 +1,25 @@
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+}
+
+.footer__text {
+    color: var(--font-color);
+    font-size: var(--font-md);
+}
+
+.footer__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--font-md);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 576px) {
+    /* ===== FOOTER ===== */
+    .footer__text,
+    .footer__link {
+        font-size: var(--font-sm);
+    }
+}

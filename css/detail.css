@@ -1,0 +1,205 @@
+/* ===== DETAIL ===== */
+.detail__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: start center;
+}
+
+.detail__image-wrapper {
+    width: 400px;
+    height: 400px;
+    /* justify-self: flex-end; */
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--image-shadow);
+}
+
+.detail__image {
+    width: 100%;
+    height: 100%;
+}
+
+.detail__info-header {
+    margin-bottom: 20px;
+}
+
+.detail__info-title {
+    font-size: var(--font-xl);
+    font-weight: var(--font-bold);
+    color: var(--font-color);
+    margin-bottom: 15px;
+}
+
+.detail__info-subtitle {
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--font-md);
+    font-weight: var(--font-medium);
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary-color);
+    padding: 3px 15px;
+    border-radius: 20px;
+}
+
+.detail__price-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.detail__discount {
+    font-size: var(--font-md);
+    color: var(--primary-red-color);
+    text-decoration: line-through;
+    height: max-content;
+}
+
+.detail__price {
+    font-size: var(--font-lg);
+    font-weight: var(--font-bold);
+    color: var(--font-color);
+}
+
+.detail__description {
+    color: var(--font-color);
+    font-size: var(--font-md);
+    font-weight: var(--font-medium);
+    color: var(--font-color);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.detail__button-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.detail__button {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    font-size: var(--font-md);
+    color: white;
+    background-color: var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    box-shadow: var(--blue-shadow);
+    transition: 0.3s;
+}
+
+.detail__button:hover {
+    box-shadow: var(--button-shadow);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 960px) {
+    /* ===== DETAIL ===== */
+    .detail__image-wrapper {
+        width: 350px;
+        height: 350px;
+    }
+
+    .detail__info-title {
+        font-size: var(--font-lg);
+        font-weight: var(--font-bold);
+        margin-bottom: 15px;
+    }
+
+    .detail__info-subtitle {
+        font-size: var(--font-sm);
+    }
+
+    .detail__discount {
+        font-size: var(--font-sm);
+    }
+
+    .detail__price {
+        font-size: var(--font-md);
+    }
+
+    .detail__description {
+        font-size: var(--font-sm);
+    }
+
+    .detail__button {
+        font-size: var(--font-sm);
+        padding: 5px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== DETAIL ===== */
+    .detail__container {
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 10px;
+        place-items: start center;
+    }
+
+    .detail__image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .detail__info-header {
+        margin-bottom: 15px;
+    }
+
+    .detail__info-title {
+        font-size: var(--font-mdl);
+        margin-bottom: 10px;
+    }
+
+    .detail__price-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .detail__button-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail__button {
+        width: max-content;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== DETAIL ===== */
+    .detail__container {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 30px;
+        place-items: start center;
+    }
+
+    .detail__image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .detail__info-header {
+        margin-bottom: 15px;
+    }
+
+    .detail__info-title {
+        font-size: var(--font-mdl);
+        margin-bottom: 10px;
+    }
+
+    .detail__price-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .detail__button-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .detail__button {
+        width: max-content;
+    }
+}

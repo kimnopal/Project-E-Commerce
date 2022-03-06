@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* ===== CSS VARIABLE ===== */
+:root {
+    /* ===== FONT ===== */
+    --font-fam: "Poppins";
+    --font-light: 200;
+    --font-medium: 400;
+    --font-bold: 600;
+    --font-color: #03045e;
+
+    /* ===== COLOR ===== */
+    --primary-color: #00b4d8;
+    --primary-light: rgba(0, 180, 216, 0.05);
+    --primary-red-color: #ff5656;
+    --primary-shadow: 0 10px 20px rgba(203, 203, 203, 0.3);
+    --image-shadow: 0 20px 30px rgba(203, 203, 203, 0.5);
+    --button-shadow: 0 5px 10px rgba(0, 180, 216, 0.25);
+    --card-border: 1px solid var(--primary-light);
+    --blue-shadow: 0 8px 15px rgba(0, 149, 199, 0.5);
+    --red-shadow: 0 8px 15px rgba(255, 86, 86, 0.55);
+    --red-shadow-hover: 0 8px 15px rgba(255, 86, 86, 0.25);
+
+    /* ===== SIZE ===== */
+    --font-xs: 0.6rem;
+    --font-sm: 0.8rem;
+    --font-md: 1rem;
+    --font-mdm: 1.1rem;
+    --font-mdl: 1.3rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+
+    /* ===== PADDING ===== */
+    --padding-sm: 20px;
+    --padding-md: 30px;
+    --padding-lg: 50px;
+
+    scroll-behavior: smooth;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: var(--font-fam);
+}
+
+/* ===== MODIFIER =====*/
+.text--bold {
+    font-weight: var(--font-bold);
+}
+
+.text--blue--primary {
+    color: var(--primary-color);
+}
+
+.pt--0 {
+    padding-top: 0 !important;
+}
+
+.pb--0 {
+    padding-bottom: 0 !important;
+}
+
+.pt--pb--30 {
+    padding: 30px 0;
+}
+
+/* ===== COMPONENT ===== */
+.btn {
+    border: none;
+    background-color: var(--primary-color);
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+    box-shadow: var(--blue-shadow);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-red {
+    border: none;
+    background-color: var(--primary-red-color);
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+    box-shadow: var(--red-shadow);
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: var(--button-shadow);
+}
+
+.btn-red:hover {
+    box-shadow: var(--red-shadow-hover);
+}
+
+.container {
+    padding: var(--padding-md) var(--padding-lg);
+}
+
+.card {
+    border-radius: 10px;
+    padding: 13px 13px;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--primary-shadow);
+}
+
+.card__image-container {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card__text {
+    position: relative;
+}
+
+.card__add-cart {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 7px;
+    border-radius: 50%;
+    /* background-image: var(--primary-color); */
+    background-color: var(--primary-color);
+    box-shadow: var(--button-shadow);
+    color: white;
+}
+
+.card__category {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: var(--font-sm);
+    margin-bottom: 10px;
+    width: fit-content;
+    max-width: 80%;
+    padding: 3px 15px;
+    border-radius: 20px;
+    background-color: var(--primary-light);
+    border: 0.5px solid var(--primary-color);
+}
+
+.card__title {
+    display: block;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: var(--font-mdl);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.card__price-container {
+    display: block;
+    text-decoration: none;
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card__price {
+    font-size: var(--font-mdm);
+    font-weight: var(--font-medium);
+}
+
+.card__disc {
+    font-size: var(--font-sm);
+    text-decoration: line-through;
+    color: var(--primary-red-color);
+}
+
+.btn--prev,
+.btn--next {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    box-shadow: var(--button-shadow);
+    /* background-image: var(--primary-color); */
+    padding: 3px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow {
+    color: #fff;
+    font-size: var(--font-md);
+}
+
+.data__not-found-container {
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data__not-found-img {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.data__not-found-text {
+    font-size: var(--font-md);
+    color: var(--primary-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 960px) {
+    /* ===== COMPONENTS ===== */
+    .container {
+        padding: var(--font-md) var(--font-sm);
+    }
+
+    .card {
+        padding: 10px 10px;
+    }
+
+    .card__category {
+        padding: 1px 8px;
+        border-radius: 20px;
+    }
+
+    .card__title {
+        font-size: var(--font-mdm);
+    }
+
+    .card__price {
+        font-size: var(--font-md);
+    }
+
+    .data__not-found-container {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ===== COMPONENT ===== */
+    .btn--prev,
+    .btn--next {
+        padding: 0 8px;
+        border-radius: 50%;
+    }
+
+    .arrow {
+        font-size: var(--font-sm);
+    }
+
+    /* ===== COMPONENTS ===== */
+    .card__title {
+        font-size: var(--font-md);
+    }
+
+    .card__disc {
+        font-size: var(--font-xs);
+    }
+
+    .data__not-found-container {
+        height: 120px;
+    }
+
+    .data__not-found-text {
+        font-size: var(--font-sm);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* ===== MODIFIER ===== */
+    .mb--sm--50 {
+        margin-bottom: 50px;
+    }
+
+    /* ===== COMPONENTS ===== */
+    .data__not-found-container {
+        height: 100px;
+    }
+}
