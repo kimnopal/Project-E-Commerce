@@ -1,0 +1,27 @@
+const sign_in_btn = document.querySelector('#sign-in-btn');
+const sign_up_btn = document.querySelector('#sign-up-btn');
+const container = document.querySelector('.container');
+
+sign_up_btn.addEventListener('click', () => {
+    container.classList.add('sign-up-mode');
+});
+
+sign_in_btn.addEventListener('click', () => {
+    container.classList.remove('sign-up-mode');
+});
+
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach((input) => {
+    input.addEventListener('focus', function() {
+        const inputField = this.parentNode;
+        inputField.classList.add('focus');
+    })
+
+    input.addEventListener('blur', function() {
+        const inputField = this.parentNode;
+        if(this.value === "") {
+            inputField.classList.remove('focus');
+        }
+    })
+})
